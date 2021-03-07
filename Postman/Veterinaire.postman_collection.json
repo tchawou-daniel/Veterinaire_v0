@@ -1,0 +1,1487 @@
+{
+	"info": {
+		"_postman_id": "799d19fc-daf1-4c89-87ce-ada1520624ca",
+		"name": "Veterinaire",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "oauth",
+			"item": [
+				{
+					"name": "Get Token",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Medecins",
+			"item": [
+				{
+					"name": "Get all medecin",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v0/medecins",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v0",
+								"medecins"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update medecin",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"medecin_id\": 1,\r\n    \"nomMedecin\": \"Fabien\",\r\n    \"prenom_medecin\": \"gaden\",\r\n    \"contact\": \"0234548976\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v0/medecins/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v0",
+								"medecins",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create medecin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"medecin_id\": 6,\n    \"nomMedecin\": \"Fanta \",\n    \"prenom_medecin\": \"Danou\",\n    \"contact\": \"0601548976\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v0/medecins/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v0",
+								"medecins",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete medecin",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v0/medecins/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v0",
+								"medecins",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search by name Kossi",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v0/medecins/recherche/Nibaruta",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v0",
+								"medecins",
+								"recherche",
+								"Nibaruta"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search by name Nibaruta",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v0/medecins/recherche/{recherche}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v0",
+								"medecins",
+								"recherche",
+								"{recherche}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v0/medecins/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v0",
+								"medecins",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Type Aniaml",
+			"item": [
+				{
+					"name": "Get all type animal",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v0/typesanimal",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v0",
+								"typesanimal"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update type animal",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"type_animal_id\": 1,\r\n    \"libtypeanimal\": \"chat\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v0/typesanimal/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v0",
+								"typesanimal",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create type animal",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"type_animal_id\": 6,\n    \"libtypeanimal\": \"peroquet\",\n    \"lib_type_animal\": \"peroquet\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v0/typesanimal",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v0",
+								"typesanimal"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete type animal",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v0/typesanimal/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v0",
+								"typesanimal",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search by name chien",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v0/typesanimal/recherche/chien",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v0",
+								"typesanimal",
+								"recherche",
+								"chien"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search by name",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v0/typesanimal/recherche/{rechercher}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v0",
+								"typesanimal",
+								"recherche",
+								"{rechercher}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search by name cheval",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v0/typesanimal/recherche/cheval",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v0",
+								"typesanimal",
+								"recherche",
+								"cheval"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v0/typesanimal/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v0",
+								"typesanimal",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Parent",
+			"item": [
+				{
+					"name": "Get all parent",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v0/parents",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v0",
+								"parents"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update parent",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"parent_id\": 1,\r\n    \"nomparent\": \"Popoa\",\r\n    \"prenom_parent\": \"Marx\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v0/parents/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v0",
+								"parents",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create parent",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"parent_id\": 6,\n    \"nomparent\": \"Ema\",\n    \"prenom_parent\": \"Son\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v0/parents",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v0",
+								"parents"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete parent",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v0/parents/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v0",
+								"parents",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search by name Popo",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v0/parents/recherche/Popo",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v0",
+								"parents",
+								"recherche",
+								"Popo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search by name",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v0/parents/recherche/{recherche}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v0",
+								"parents",
+								"recherche",
+								"{recherche}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search by name  Doudou",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v0/parents/recherche/Doudou",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v0",
+								"parents",
+								"recherche",
+								"Doudou"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v0/parents/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v0",
+								"parents",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Animal",
+			"item": [
+				{
+					"name": "Get all animal",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v0/animals",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v0",
+								"animals"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update animal",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"animal_id\": 1,\r\n        \"nomanimal\": \"Lamina\",\r\n        \"sex_animal\": \"male\",\r\n        \"rendez_vous\": [\r\n            {\r\n                \"rdv_id\": 1,\r\n                \"medecin\": {\r\n                    \"medecin_id\": 4,\r\n                    \"prenom_medecin\": \"Denis\",\r\n                    \"contact\": \"0621598742\",\r\n                    \"nomMedecin\": \"DAlmeida\"\r\n                },\r\n                \"ordonnances\": [\r\n                    {\r\n                        \"ordonnance_id\": 5\r\n                    }\r\n                ],\r\n                \"date_rdv\": \"0012-01-23T12:18:24.000+00:00\",\r\n                \"heure_debut_rdv\": \"0012-01-23T08:16:24.000+00:00\",\r\n                \"heure_fin_rdv\": \"0012-01-23T09:16:24.000+00:00\"\r\n            }\r\n        ],\r\n        \"nom_animal\": \"Lalou\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v0/animals/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v0",
+								"animals",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create animal",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"animal_id\": 6,\n        \"nomanimal\": \"Armanda\",\n        \"sex_animal\": \"female\",\n        \"rendez_vous\": [\n            {\n                \"rdv_id\": 1,\n                \"medecin\": {\n                    \"medecin_id\": 4,\n                    \"prenom_medecin\": \"Denis\",\n                    \"contact\": \"0621598742\",\n                    \"nomMedecin\": \"DAlmeida\"\n                },\n                \"ordonnances\": [\n                    {\n                        \"ordonnance_id\": 5\n                    }\n                ],\n                \"date_rdv\": \"0012-01-23T12:18:24.000+00:00\",\n                \"heure_debut_rdv\": \"0012-01-23T08:16:24.000+00:00\",\n                \"heure_fin_rdv\": \"0012-01-23T09:16:24.000+00:00\"\n            }\n        ],\n        \"nom_animal\": \"Lalou\"\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v0/animals",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v0",
+								"animals"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete animal",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v0/animals/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v0",
+								"animals",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search by name",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v0/animals/recherche/{recherche}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v0",
+								"animals",
+								"recherche",
+								"{recherche}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v0/animals/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v0",
+								"animals",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Rendez-vous",
+			"item": [
+				{
+					"name": "Get all rendezvous",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v0/rendezvous/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v0",
+								"rendezvous",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update rendezvous",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"rdv_id\": 1,\r\n        \"medecin\": {\r\n            \"medecin_id\": 4,\r\n            \"prenom_medecin\": \"Jima\",\r\n            \"contact\": \"067842972\",\r\n            \"nomMedecin\": \"Carmel\"\r\n        },\r\n        \"ordonnances\": [\r\n            {\r\n                \"ordonnance_id\": 5\r\n            }\r\n        ],\r\n        \"date_rdv\": \"0012-01-23T12:18:24.000+00:00\",\r\n        \"heure_debut_rdv\": \"0012-01-23T08:16:24.000+00:00\",\r\n        \"heure_fin_rdv\": \"0012-01-23T09:16:24.000+00:00\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v0/rendezvous/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v0",
+								"rendezvous",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create rendezvous",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"rdv_id\": 6,\n        \"medecin\": {\n            \"medecin_id\": 5,\n            \"prenom_medecin\": \"Gara\",\n            \"contact\": \"0621598742\",\n            \"nomMedecin\": \"Naruto\"\n        },\n        \"ordonnances\": [\n            {\n                \"ordonnance_id\": 4\n            }\n        ],\n        \"date_rdv\": \"0011-01-23T12:18:24.000+00:00\",\n        \"heure_debut_rdv\": \"0011-01-23T08:16:24.000+00:00\",\n        \"heure_fin_rdv\": \"0011-01-23T09:16:24.000+00:00\"\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v0/rendezvous/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v0",
+								"rendezvous",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create rendezvous (AVEC DATE DÉJÀ SAVE)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"rdv_id\": 7,\n        \"medecin\": {\n            \"medecin_id\": 4,\n            \"prenom_medecin\": \"Denis\",\n            \"contact\": \"0621598742\",\n            \"nomMedecin\": \"DAlmeida\"\n        },\n        \"ordonnances\": [\n            {\n                \"ordonnance_id\": 5\n            }\n        ],\n        \"daterdv\": \"0012-01-23T12:18:24.000+00:00\",\n        \"heuredebutrdv\": \"0012-01-23T08:16:24.000+00:00\",\n        \"heurefinrdv\": \"0012-01-23T09:16:24.000+00:00\"\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v0/rendezvous/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v0",
+								"rendezvous",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete rendezvous",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v0/rendezvous/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v0",
+								"rendezvous",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v0/rendezvous/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v0",
+								"rendezvous",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Medicament",
+			"item": [
+				{
+					"name": "Get all medicament",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v0/medicaments",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v0",
+								"medicaments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update medicament",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"medicament_id\": 3,\r\n    \"nommedicament\": \"Solution injectable\",\r\n    \"description\": \"IMALGENEd 100000\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v0/medicaments/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v0",
+								"medicaments",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create medicament",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"medicament_id\": 10,\n    \"nommedicament\": \"Solution injectable\",\n    \"description\": \"IMALGENEd 100000\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v0/medicaments",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v0",
+								"medicaments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete medicament",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v0/medicaments/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v0",
+								"medicaments",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search by name",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v0/medicaments/recherche/{recherche}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v0",
+								"medicaments",
+								"recherche",
+								"{recherche}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v0/medicaments/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v0",
+								"medicaments",
+								"5"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Ordonnance",
+			"item": [
+				{
+					"name": "Get all ordonnance",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v0/ordonnances/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v0",
+								"ordonnances",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update ordonnance",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ordonnance_id\": 5\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v0/ordonnance/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v0",
+								"ordonnance",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create ordonnance",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v0/ordonnance",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v0",
+								"ordonnance"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete ordonnance",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v0/ordonnance/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v0",
+								"ordonnance",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v0/prescriptions/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v0",
+								"prescriptions",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Prescription",
+			"item": [
+				{
+					"name": "Get all prescription",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v0/prescriptions/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v0",
+								"prescriptions",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update prescription",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"prescription_id\": 1,\r\n        \"date_prescription\": \"25-01-21 15:00\",\r\n        \"frequence_de_prise\": \"une fois par deux jours\",\r\n        \"quantite\": 1,\r\n        \"ordonnance\": {\r\n            \"ordonnance_id\": 1\r\n        },\r\n        \"medicament\": {\r\n            \"medicament_id\": 1,\r\n            \"nommedicament\": \"Poudre pour solution buvable\",\r\n            \"description\": \"ACTI-TETRA B\"\r\n        }\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v0/prescriptions/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v0",
+								"prescriptions",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create prescription",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"prescription_id\": 7,\n        \"date_prescription\": \"25-01-11 15:01\",\n        \"frequence_de_prise\": \"une fois par deux jours\",\n        \"quantite\": 3,\n        \"ordonnance\": {\n            \"ordonnance_id\": 3\n        },\n        \"medicament\": {\n            \"medicament_id\": 5,\n            \"nommedicament\": \"Poudre pour solution buvable\",\n            \"description\": \"ACTI-TETRA B\"\n        }\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v0/prescriptions/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v0",
+								"prescriptions",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete prescription",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v0/prescriptions/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v0",
+								"prescriptions",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v0/prescriptions/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v0",
+								"prescriptions",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		}
+	]
+}
