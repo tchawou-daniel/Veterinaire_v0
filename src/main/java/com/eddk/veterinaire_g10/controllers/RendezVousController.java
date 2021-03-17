@@ -28,7 +28,7 @@ public class RendezVousController {
 
     //get rdv by ID
     @GetMapping("/{id}")
-    public RendezVous getRendezVousById(@PathVariable(value = "id") Integer rdvid){
+    public RendezVous getRendezVousById(@PathVariable(value = "id") Integer rdvid) {
         return this.rendezvousRepository.findById(rdvid).orElseThrow(() -> new ResourceNotFoundException("Rendez-vous not found"));
     }
 
@@ -41,11 +41,11 @@ public class RendezVousController {
         try {
             rdvd = rendezvousRepository.findByDaterdvLike(rendezvous.getDateRdv());
             rdvhd = rendezvousRepository.findByHeuredebutrdvLike(rendezvous.getHeureDebutRdv());
-            rdvhf= rendezvousRepository.findByHeurefinrdvLike(rendezvous.getHeureFinRdv());
-            if(rdvd==null && rdvhd==null && rdvhf==null){
+            rdvhf = rendezvousRepository.findByHeurefinrdvLike(rendezvous.getHeureFinRdv());
+            if (rdvd == null && rdvhd == null && rdvhf == null) {
                 return rendezvousRepository.saveAndFlush(rendezvous);
             }
-        }catch (Exception e){
+        } catch (Exception e) {
             System.out.println("le rendez-vous à cette période n'est pas dispo");
         }
 
@@ -53,11 +53,9 @@ public class RendezVousController {
     }
 
 
-
-
     //update rdv
     @PutMapping("/{id}")
-    public RendezVous updateRendezVous(@RequestBody RendezVous rendezVous, @PathVariable(value = "id") Integer rdv_id){
+    public RendezVous updateRendezVous(@RequestBody RendezVous rendezVous, @PathVariable(value = "id") Integer rdv_id) {
 
         RendezVous existingRendezVous = this.rendezvousRepository.findById(rdv_id).orElseThrow(() -> new ResourceNotFoundException("Rendez-vous not found"));
 
@@ -72,10 +70,14 @@ public class RendezVousController {
 
     }
 
+    @GetMapping(value = "/recherche/{recherche}")
+    public List<RendezVous> searchForEntity(@PathVariable String recherche) {
+        return rendezvousRepository.findBynomrdvLike("%" + recherche + "%");
+    }
 
     //delete rdv by ID
     @DeleteMapping("/{id}")
-    public void deleteRendezVous(@PathVariable("id") Integer rdvid){
+    public void deleteRendezVous(@PathVariable("id") Integer rdvid) {
 
         rendezvousRepository.deleteById(rdvid);
 

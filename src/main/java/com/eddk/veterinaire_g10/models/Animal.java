@@ -23,7 +23,7 @@ public class Animal {
     private String nomanimal;
     private String sexanimal;
 
-    @OneToMany(fetch=FetchType.LAZY, mappedBy="animal")
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "animal")
     private List<RendezVous> rendezvous;
 
     @ManyToOne
@@ -31,7 +31,7 @@ public class Animal {
     @JoinColumn(foreignKey = @ForeignKey(name = "typeanimalid"))
     private TypeAnimal typeanimal;
 
-    public Animal(int animalid,String nomanimal,String sexanimal,TypeAnimal typeanimal) {
+    public Animal(int animalid, String nomanimal, String sexanimal, TypeAnimal typeanimal) {
         this.animalid = animalid;
         this.nomanimal = sexanimal;
         this.sexanimal = sexanimal;

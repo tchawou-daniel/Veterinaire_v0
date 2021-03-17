@@ -17,7 +17,7 @@ public class MedicamentsController {
     @Autowired
     private MedicamentRepository medicamentRepository;
 
-    public MedicamentsController(MedicamentRepository medicamentRepository){
+    public MedicamentsController(MedicamentRepository medicamentRepository) {
         this.medicamentRepository = medicamentRepository;
     }
 
@@ -27,20 +27,22 @@ public class MedicamentsController {
     }
 
     @RequestMapping("{id}")
-    public Medicament get(@PathVariable int id){
+    public Medicament get(@PathVariable int id) {
         return medicamentRepository.getOne(id);
     }
 
     @PostMapping
-    public Medicament create(@RequestBody Medicament medicament) { return medicamentRepository.saveAndFlush(medicament); }
+    public Medicament create(@RequestBody Medicament medicament) {
+        return medicamentRepository.saveAndFlush(medicament);
+    }
 
-    @RequestMapping(value="{id}", method = RequestMethod.DELETE)
-    public void delete (@PathVariable int id) {
+    @RequestMapping(value = "{id}", method = RequestMethod.DELETE)
+    public void delete(@PathVariable int id) {
         medicamentRepository.deleteById(id);
     }
 
-    @RequestMapping(value = "{id}", method=RequestMethod.PUT)
-    public Medicament update(@PathVariable int id, @RequestBody Medicament medicament){
+    @RequestMapping(value = "{id}", method = RequestMethod.PUT)
+    public Medicament update(@PathVariable int id, @RequestBody Medicament medicament) {
         Medicament existingMedicament = medicamentRepository.getOne(id);
         BeanUtils.copyProperties(medicament, existingMedicament, "medicamentid");
         return medicamentRepository.saveAndFlush(existingMedicament);
@@ -48,11 +50,8 @@ public class MedicamentsController {
 
     @GetMapping(value = "/recherche/{recherche}")
     public List<Medicament> searchForEntity(@PathVariable String recherche) {
-        return medicamentRepository.findByNommedicamentLike("%"+recherche+"%");
+        return medicamentRepository.findByNommedicamentLike("%" + recherche + "%");
     }
-
-
-
 
 
 }

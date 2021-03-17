@@ -18,29 +18,33 @@ public class Parent {
     private String nomparent;
     private String prenomparent;
 
-    @OneToMany(mappedBy="parent")
+    @OneToMany(mappedBy = "parent")
     @JsonIgnore
     private List<Animal> animals;
 
-    public Parent(int parentid,String nomparent,String prenomparent){
+    public Parent(int parentid, String nomparent, String prenomparent) {
         this.parentid = parentid;
         this.nomparent = nomparent;
         this.prenomparent = prenomparent;
     }
+
     public Parent() {
     }
+
     public String getNomParent() {
         return nomparent;
     }
+
     public void setNomParent(String nomparent) {
-        this.nomparent=nomparent;
+        this.nomparent = nomparent;
     }
 
     public String getPrenomParent() {
         return prenomparent;
     }
+
     public void setPrenomParent(String prenomparent) {
-        this.prenomparent=prenomparent;
+        this.prenomparent = prenomparent;
     }
 
 }

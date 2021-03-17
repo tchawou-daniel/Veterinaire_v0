@@ -12,7 +12,7 @@ import java.util.List;
 @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 public class Prescription {
     @Id
-    @GeneratedValue (strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int prescriptionid;
 
     private String dateprescription;
@@ -27,7 +27,7 @@ public class Prescription {
     @JoinColumn(foreignKey = @ForeignKey(name = "medicamentid"))
     private Medicament medicament;
 
-    public Prescription(){
+    public Prescription() {
     }
 
     public int getPrescriptionId() {

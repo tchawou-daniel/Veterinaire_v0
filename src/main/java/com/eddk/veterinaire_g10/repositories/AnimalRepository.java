@@ -7,7 +7,7 @@ import org.springframework.data.repository.query.Param;
 
 import java.util.List;
 
-public interface AnimalRepository  extends JpaRepository<Animal, Integer>  {
+public interface AnimalRepository extends JpaRepository<Animal, Integer> {
     List<Animal> findByNomanimalLike(@Param("nomanimal") String nomanimal);
 
 }

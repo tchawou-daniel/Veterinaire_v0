@@ -20,7 +20,7 @@ public class Medecin {
     private String prenommedecin;
     private String contact;
 
-    @OneToMany(mappedBy="medecin")
+    @OneToMany(mappedBy = "medecin")
     @JsonIgnore
     private List<RendezVous> rendezvous;
 

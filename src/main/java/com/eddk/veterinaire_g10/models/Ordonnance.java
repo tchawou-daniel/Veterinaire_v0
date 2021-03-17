@@ -19,12 +19,14 @@ public class Ordonnance {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int ordonnanceid;
 
+    private String nomordonnance;
+
     @ManyToOne
     @JsonIgnore
     @JoinColumn(foreignKey = @ForeignKey(name = "rdvid"))
     private RendezVous rendezvous;
 
-    @OneToMany(mappedBy="ordonnance")
+    @OneToMany(mappedBy = "ordonnance")
     @JsonIgnore
     private List<Prescription> prescriptions;
 

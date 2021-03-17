@@ -17,40 +17,42 @@ import com.eddk.veterinaire_g10.repositories.ParentRepository;
 @RestController
 @RequestMapping("/api/v0/parents")
 public class ParentsController {
-	@Autowired
-	private ParentRepository parentRepository;
-	// get all parent animal
-	@GetMapping
-	public List<Parent> getAllParents(){
-		return this.parentRepository.findAll();
-	}
+    @Autowired
+    private ParentRepository parentRepository;
 
-	@GetMapping("{id}")
-	public Parent get(@PathVariable int id) {
-		return parentRepository.getOne(id);
-	}
+    // get all parent animal
+    @GetMapping
+    public List<Parent> getAllParents() {
+        return this.parentRepository.findAll();
+    }
 
-
-	@PostMapping
-	public Parent create(@RequestBody Parent parent) { return parentRepository.saveAndFlush(parent); }
+    @GetMapping("{id}")
+    public Parent get(@PathVariable int id) {
+        return parentRepository.getOne(id);
+    }
 
 
-	@RequestMapping(value="{id}", method = RequestMethod.DELETE)
-	public void delete (@PathVariable int id) {
-		parentRepository.deleteById(id);
-	}
-
-	@RequestMapping(value = "{id}", method=RequestMethod.PUT)
-	public Parent update(@PathVariable int id, @RequestBody Parent prescription){
-		Parent existingParent = parentRepository.getOne(id);
-		BeanUtils.copyProperties(prescription, existingParent, "parentid");
-		return parentRepository.saveAndFlush(existingParent);
-	}
+    @PostMapping
+    public Parent create(@RequestBody Parent parent) {
+        return parentRepository.saveAndFlush(parent);
+    }
 
 
+    @RequestMapping(value = "{id}", method = RequestMethod.DELETE)
+    public void delete(@PathVariable int id) {
+        parentRepository.deleteById(id);
+    }
 
-	@GetMapping(value = "/recherche/{recherche}")
-	public List<Parent> searchForEntity(@PathVariable String recherche) {
-		return parentRepository.findByNomparentLike("%"+recherche+"%");
-	}
+    @RequestMapping(value = "{id}", method = RequestMethod.PUT)
+    public Parent update(@PathVariable int id, @RequestBody Parent prescription) {
+        Parent existingParent = parentRepository.getOne(id);
+        BeanUtils.copyProperties(prescription, existingParent, "parentid");
+        return parentRepository.saveAndFlush(existingParent);
+    }
+
+
+    @GetMapping(value = "/recherche/{recherche}")
+    public List<Parent> searchForEntity(@PathVariable String recherche) {
+        return parentRepository.findByNomparentLike("%" + recherche + "%");
+    }
 }

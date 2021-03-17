@@ -3,6 +3,7 @@ package com.eddk.veterinaire_g10.models;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;
+import org.springframework.data.repository.query.Param;
 
 import javax.persistence.*;
 import java.util.Date;
@@ -16,6 +17,14 @@ public class RendezVous {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int rdvid;
 
+    private String nomrdv;
+
+    private Date daterdv;
+
+    private Date heuredebutrdv;
+
+    private Date heurefinrdv;
+
     @ManyToOne
     @JsonIgnore
     @JoinColumn(foreignKey = @ForeignKey(name = "animalid"))
@@ -25,18 +34,16 @@ public class RendezVous {
     @JoinColumn(foreignKey = @ForeignKey(name = "medecinid"))
     private Medecin medecin;
 
-    @OneToMany(fetch=FetchType.LAZY, mappedBy="rendezvous")
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "rendezvous")
     @JsonIgnore
     private List<Ordonnance> ordonnances;
 
-    private Date daterdv;
-    private Date heuredebutrdv;
-    private Date heurefinrdv;
 
     public RendezVous() {
     }
 
-    public RendezVous(Animal animal, Medecin medecin, List<Ordonnance> ordonnances, Date daterdv, Date heuredebutrdv, Date heurefinrdv) {
+    public RendezVous(Animal animal,String nomrdv, Medecin medecin, List<Ordonnance> ordonnances, Date daterdv, Date heuredebutrdv, Date heurefinrdv) {
+        this.nomrdv = nomrdv;
         this.animal = animal;
         this.medecin = medecin;
         this.ordonnances = ordonnances;
@@ -49,8 +56,8 @@ public class RendezVous {
         return rdvid;
     }
 
-    public void setRdvId(int rdv_id) {
-        this.rdvid = rdvid;
+    public String getNomRdv(){
+        return nomrdv;
     }
 
     public Animal getAnimal() {

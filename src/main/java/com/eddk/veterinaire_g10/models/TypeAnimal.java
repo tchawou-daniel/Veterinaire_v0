@@ -17,7 +17,7 @@ public class TypeAnimal {
 
     private String libtypeanimal;
 
-    @OneToMany(mappedBy="typeanimal")
+    @OneToMany(mappedBy = "typeanimal")
     @JsonIgnore
     private List<Animal> animals;
 

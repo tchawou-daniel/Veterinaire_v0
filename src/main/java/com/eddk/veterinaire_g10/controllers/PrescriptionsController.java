@@ -9,7 +9,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 
-
 import java.util.List;
 
 
@@ -31,22 +30,21 @@ public class PrescriptionsController {
     }
 
     @PostMapping
-    public Prescription create(@RequestBody Prescription prescription) { return prescriptionRepository.saveAndFlush(prescription); }
+    public Prescription create(@RequestBody Prescription prescription) {
+        return prescriptionRepository.saveAndFlush(prescription);
+    }
 
-    @RequestMapping(value="{id}", method = RequestMethod.DELETE)
-    public void delete (@PathVariable int id) {
+    @RequestMapping(value = "{id}", method = RequestMethod.DELETE)
+    public void delete(@PathVariable int id) {
         prescriptionRepository.deleteById(id);
     }
 
-    @RequestMapping(value = "{id}", method=RequestMethod.PUT)
-    public Prescription update(@PathVariable int id, @RequestBody Prescription prescription){
+    @RequestMapping(value = "{id}", method = RequestMethod.PUT)
+    public Prescription update(@PathVariable int id, @RequestBody Prescription prescription) {
         Prescription existingPrescription = prescriptionRepository.getOne(id);
         BeanUtils.copyProperties(prescription, existingPrescription, "prescriptionid");
         return prescriptionRepository.saveAndFlush(existingPrescription);
     }
-
-
-
 
 
 }

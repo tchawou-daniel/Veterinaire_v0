@@ -19,7 +19,7 @@ public class Medicament {
 
     public String description;
 
-    @OneToMany(mappedBy="medicament")
+    @OneToMany(mappedBy = "medicament")
     @JsonIgnore
     private List<Prescription> prescriptions;
 
