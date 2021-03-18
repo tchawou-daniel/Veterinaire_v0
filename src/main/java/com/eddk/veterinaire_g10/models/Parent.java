@@ -5,6 +5,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;
 
 import javax.persistence.*;
+import javax.validation.constraints.Size;
 import java.util.List;
 
 @Entity(name = "parent")
@@ -20,6 +21,7 @@ public class Parent {
 
     @OneToMany(mappedBy = "parent")
     @JsonIgnore
+    @Size(min = 1, max = 2)
     private List<Animal> animals;
 
     public Parent(int parentid, String nomparent, String prenomparent) {

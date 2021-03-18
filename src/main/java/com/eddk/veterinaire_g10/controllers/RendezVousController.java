@@ -78,9 +78,7 @@ public class RendezVousController {
     //delete rdv by ID
     @DeleteMapping("/{id}")
     public void deleteRendezVous(@PathVariable("id") Integer rdvid) {
-
         rendezvousRepository.deleteById(rdvid);
-
     }
 
 }

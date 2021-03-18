@@ -53,7 +53,6 @@ public class AnimalsController {
         return animalRepository.saveAndFlush(existingAnimal);
     }
 
-
     @GetMapping(value = "/recherche/{recherche}")
     public List<Animal> searchForEntity(@PathVariable String recherche) {
         return animalRepository.findByNomanimalLike("%" + recherche + "%");
