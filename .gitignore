@@ -34,7 +34,7 @@ hs_err_pid*
 .settings/org.eclipse.m2e.core.prefs
 /bin/
 
-.idea/*
 veterinaire_spring.iml
 application-*.properties
 
+/.idea/
