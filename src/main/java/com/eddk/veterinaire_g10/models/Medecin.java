@@ -26,28 +26,4 @@ public class Medecin {
 
     public Medecin() {
     }
-
-    public String getNomMedecin() {
-        return nommedecin;
-    }
-
-    public void setNomMedecin(String nommedecin) {
-        this.nommedecin = nommedecin;
-    }
-
-    public String getPrenomMedecin() {
-        return prenommedecin;
-    }
-
-    public void setPrenomMedecin(String prenommedecin) {
-        this.prenommedecin = prenommedecin;
-    }
-
-    public String getContact() {
-        return contact;
-    }
-
-    public void setContact(String contact) {
-        this.contact = contact;
-    }
 }

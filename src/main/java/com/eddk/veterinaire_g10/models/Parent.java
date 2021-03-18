@@ -15,38 +15,30 @@ public class Parent {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int parentid;
-
     private String nomparent;
     private String prenomparent;
+    private String typeparent;
+
+    private enum TYPEPARENT {HOMME, FEMME}
 
     @OneToMany(mappedBy = "parent")
     @JsonIgnore
     @Size(min = 1, max = 2)
     private List<Animal> animals;
 
-    public Parent(int parentid, String nomparent, String prenomparent) {
+
+    public Parent(int parentid, String nomparent, String prenomparent, String typeparent) {
         this.parentid = parentid;
         this.nomparent = nomparent;
         this.prenomparent = prenomparent;
+        this.typeparent = typeparent;
     }
 
     public Parent() {
     }
-
-    public String getNomParent() {
-        return nomparent;
+    public String getTypeparent(){
+        return typeparent;
     }
 
-    public void setNomParent(String nomparent) {
-        this.nomparent = nomparent;
-    }
-
-    public String getPrenomParent() {
-        return prenomparent;
-    }
-
-    public void setPrenomParent(String prenomparent) {
-        this.prenomparent = prenomparent;
-    }
 
 }

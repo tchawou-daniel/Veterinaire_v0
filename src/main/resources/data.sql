@@ -12,7 +12,8 @@ CREATE TABLE IF NOT EXISTS parent
 (
     parentid     int not null AUTO_INCREMENT primary key,
     nomparent    varchar(50),
-    prenomparent varchar(50)
+    prenomparent varchar(50),
+    typeparent   enum('HOMME','FEMME')
 );
 
 /*==============================================================*/
@@ -106,12 +107,12 @@ VALUES (1, 'chien'),
        (4, 'veau'),
        (5, 'chat');
 
-INSERT INTO parent (parentid, nomparent, prenomparent)
-VALUES (1, 'Popo', 'Marx'),
-       (2, 'Doudou', 'Scooby'),
-       (3, 'Case', 'Doo'),
-       (4, 'Momo', 'Tom'),
-       (5, 'Bobo', 'Joe');
+INSERT INTO parent (parentid, nomparent, prenomparent, typeparent)
+VALUES (1, 'Popo', 'Marx', 'HOMME'),
+       (2, 'Doudou', 'Scooby', 'HOMME'),
+       (3, 'Case', 'Doo', 'FEMME'),
+       (4, 'Momo', 'Tom', 'FEMME'),
+       (5, 'Bobo', 'Joe', 'HOMME');
 
 --(animalid, nomanimal, sexanimal, parentid, typeanimalid)
 INSERT INTO animal

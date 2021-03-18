@@ -44,10 +44,19 @@ public class ParentsController {
     }
 
     @RequestMapping(value = "{id}", method = RequestMethod.PUT)
-    public Parent update(@PathVariable int id, @RequestBody Parent prescription) {
+    public Parent update(@PathVariable int id, @RequestBody Parent parent) {
+
         Parent existingParent = parentRepository.getOne(id);
-        BeanUtils.copyProperties(prescription, existingParent, "parentid");
+        System.out.println(existingParent.getTypeparent().compareTo("FEMME"));
+        System.out.println(existingParent.getTypeparent().compareTo("HOMME"));
+        System.out.println(!(existingParent.getTypeparent().compareTo("FEMME")==0 || existingParent.getTypeparent().compareTo("HOMME")==0));
+
+        if(!(existingParent.getTypeparent().compareTo("FEMME")==0 || existingParent.getTypeparent().compareTo("HOMME")==0)) {
+            java.lang.System.exit(-1);
+        }
+        BeanUtils.copyProperties(parent, existingParent, "parentid");
         return parentRepository.saveAndFlush(existingParent);
+
     }
 
 
